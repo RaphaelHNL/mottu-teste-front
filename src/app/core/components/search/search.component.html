@@ -2,11 +2,11 @@
 
     <div class="container-search">
 
-        <img src="../../../../assets/titlehome.svg" />
+        <img src="assets/titlehome.svg" />
 
         <mat-form-field appearance="outline" class="custom-input">
             <mat-label>Pesquisar</mat-label>
-            <input matInput [(ngModel)]="searchQuery" (change)="onSearch()">
+            <input matInput [formControl]="searchControl">
         </mat-form-field>
     </div>
 
@@ -19,7 +19,7 @@
                 <div class="favorite-icon-container" (click)="toggleFavorite(character)">
                     <div *ngIf="character.isFavorite" class="icon-background"> </div>
 
-                    <img [src]="character.isFavorite ? '../../../../assets/favoritefull.svg' : '../../../../assets/favorempty.svg'"
+                    <img [src]="character.isFavorite ? 'assets/favoritefull.svg' : 'assets/favorempty.svg'"
                         class="favorite-icon" [ngClass]="{'favorited-filter': character.isFavorite}" />
 
                 </div>

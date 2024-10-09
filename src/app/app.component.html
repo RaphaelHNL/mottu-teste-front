@@ -1,8 +1,8 @@
 <div class="header">
-    <img src="../assets/logo.svg"/>
+    <img src="assets/logo.svg"/>
     <div class="links">
-    <a  class="home" (click)="navigatePage('/search')" [ngClass]="{'link-white ': isActive('/search'), 'link-black': !isActive('/search')}"> <img src="../assets/iconhome.svg" class="home-icon"/> Inicio</a>
-        <a class="favorites"  (click)="navigatePage('/favorites')" [ngClass]="{'link-black': !isActive('/favorites'), 'link-white count-active': isActive('/favorites')}"> <img src="../assets/iconfavorites.svg"/> Favoritos <div class="count" [ngClass]="{'count-inactive': !isActive('/favorites'), 'count-active': isActive('/favorites')}">{{count}}</div></a>
+    <a  class="home" (click)="navigatePage('/search')" [ngClass]="{'link-white ': isActive('/search'), 'link-black': !isActive('/search')}"> <img src="assets/iconhome.svg" class="home-icon"/> Inicio</a>
+        <a class="favorites"  (click)="navigatePage('/favorites')" [ngClass]="{'link-black': !isActive('/favorites'), 'link-white count-active': isActive('/favorites')}"> <img src="assets/iconfavorites.svg"/> Favoritos <div class="count" [ngClass]="{'count-inactive': !isActive('/favorites'), 'count-active': isActive('/favorites')}">{{count}}</div></a>
     </div>
 </div>
 <router-outlet></router-outlet>

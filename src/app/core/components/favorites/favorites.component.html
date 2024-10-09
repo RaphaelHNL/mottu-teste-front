@@ -2,7 +2,7 @@
 
     <div class="container-search">
 
-        <img src="../../../../assets/titlefavorites.svg" />
+        <img src="assets/titlefavorites.svg" />
     </div>
 
     <div class="container-card" *ngIf="favoriteCharacters.length > 0">
@@ -14,7 +14,7 @@
                 <div class="favorite-icon-container" (click)="removeFavorite(character)">
                     <div *ngIf="character.isFavorite" class="icon-background"> </div>
 
-                    <img [src]="character.isFavorite ? '../../../../assets/favoritefull.svg' : '../../../../assets/favorempty.svg'"
+                    <img [src]="character.isFavorite ? 'assets/favoritefull.svg' : 'assets/favorempty.svg'"
                         class="favorite-icon" [ngClass]="{'favorited-filter': character.isFavorite}" />
 
                 </div>
