@@ -1,0 +1,112 @@
+
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 24px 8px 24px;
+    background-color: #0A0A0A;
+
+    .links{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 40px;
+        a{
+            font-family: Poppins;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 14px;
+            text-align: center;
+
+        }
+        .home{
+            border-radius: 10px 0 0 10px;
+            width: 99px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .favorites{
+            border-radius: 0 10px 10px 0;
+            width: 154px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+            .count{
+                display: flex; 
+                justify-content: center;
+                align-items: center;      
+                width: 20px;               
+                height: 20px;               
+                            
+                border-radius: 50%;        
+                text-align: center;
+                padding: 2px;         
+            }
+            .count-active{
+                background-color: black;   
+                color: #CACACA; 
+            }
+            .count-inactive{
+                background-color: #FFFFFF;   
+                color: #0A0A0A; 
+            }
+        }
+
+
+        .link-white, .link-black{
+            height: 100%;
+            border: 1px solid #3D3D3D;
+            padding: 4px 16px 4px 16px;
+        }
+    
+        .link-white{
+            color: #0A0A0A;
+            background-color: #FFFFFF;
+            
+        }
+    
+        .link-black{
+            color: #A4A4A4;
+            img{
+                filter: invert(66%) sepia(20%) saturate(175%) hue-rotate(185deg) brightness(90%) contrast(86%);
+            }
+        }
+    }
+
+    
+}
+
+
+
+/* Media Queries para responsividade em dispositivos móveis */
+@media (max-width: 768px) {
+    .home{
+        width: 50px !important;
+        .home-icon{
+            margin-right: 5px;
+        }
+    }
+
+    .favorites{
+        width: 120px !important; 
+    }
+}
+
+
+@media (max-width: 576px) {
+    .home{
+        width: 50px !important;
+        .home-icon{
+            margin-right: 5px;
+        }
+    }
+
+    .favorites{
+        width: 120px !important; 
+    }
+}
+

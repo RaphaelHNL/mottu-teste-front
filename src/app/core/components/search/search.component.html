@@ -1,0 +1,41 @@
+<div class="container">
+
+    <div class="container-search">
+
+        <img src="../../../../assets/titlehome.svg" />
+
+        <mat-form-field appearance="outline" class="custom-input">
+            <mat-label>Pesquisar</mat-label>
+            <input matInput [(ngModel)]="searchQuery" (change)="onSearch()">
+        </mat-form-field>
+    </div>
+
+    <div class="container-card" *ngIf="!hasError">
+
+
+        <div class="card" *ngFor="let character of characters">
+            <div class="image-container">
+                <img [src]="character.image" alt="{{ character.name }}" class="character-image" />
+                <div class="favorite-icon-container" (click)="toggleFavorite(character)">
+                    <div *ngIf="character.isFavorite" class="icon-background"> </div>
+
+                    <img [src]="character.isFavorite ? '../../../../assets/favoritefull.svg' : '../../../../assets/favorempty.svg'"
+                        class="favorite-icon" [ngClass]="{'favorited-filter': character.isFavorite}" />
+
+                </div>
+            </div>
+            <div class="content-card">
+                <h2>{{character.name}}</h2>
+                <p>{{character.species}}</p>
+                <p>{{character.type}}</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-error" *ngIf="hasError">
+        <h1>Nada foi encontrado</h1>
+        <p>Tente realizar uma nova busca.</p>
+    </div>
+
+</div>
