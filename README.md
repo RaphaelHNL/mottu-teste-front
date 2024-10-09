@@ -1,6 +1,6 @@
 # MottuChallenge
 
-## Esse projeto foi feito para podermos visualizar e favoritar personagens do rick e morty.
+Esse projeto foi feito para podermos visualizar e favoritar personagens do rick e morty.
 
 ## Tecnologias necessárias para rodar o projeto
 E necessário ter o angular/cli na versão 15.2.0 e também o node na versão 14.20.1.
